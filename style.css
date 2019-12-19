@@ -17,12 +17,9 @@ body {
   border: 2px solid #333;
 }
 
-.wrapper {
-  height: var(--wrapper-height);
-}
-
 .grid-wrapper {
   position: relative;
+  margin-top: 10px;
 }
 
 input {
@@ -30,7 +27,7 @@ input {
   margin: 0;
   margin-bottom: 10px;
   font-size: 13px;
-  width: 20px;
+  width: 3rem;
 }
 
 .block {

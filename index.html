@@ -9,49 +9,50 @@
   </head>
   <body>
     <div id="app">
+
+      <h3>Drawing grid</h3>
       <grid 
-        :gridsize="Number(15)" 
-        :blocksize="Number(15)"
-      >
-      </grid>
-      <!-- <grid 
-        :gridsize="Number(8)"
-        :blocksize="Number(25)"
-      >
-      </grid> -->
+        :gridsize="Number(15)"
+        :initialblocksize="Number(15)"
+      />
     </div>
 
     <template id="grid-template">
-      <div :style="{'height': `${gridsize * blocksize + 125}px`}">
+      <article :style="{'height': `${gridsize * blocksize + 125}px`}">
         <input 
-            type="text" 
+            type="number" 
             :value="gridsize" 
             @keyup.enter="createGrid" 
             placeholder="Enter grid size..."
+            min="1"
+            max="100"
+            maxlength="3"
           >
           <button @click="resetGrid">Reset</button>
           <button @click="shuffleGrid">Shuffle</button>
-          <div class="slidecontainer">
+          <section class="slidecontainer">
             <input 
               type="range" 
               min="10" 
               max="200" 
               step="1"
-              v-model="blocksize" 
+              v-model="blocksize"
               class="slider" 
               id="myRange"
             >
-          </div>
-          <div>
+          </section>
+          <section>
             <span 
               v-for="(col, index) of colours" 
               class="col"
               @click="chooseColour(col)"
               :style="{
-                'opacity':`${getOpacity(col)}`,'background-color':`${col}`,'border-color':`${getBorderColour(col)}`
+                'opacity':`${getOpacity(col)}`,
+                'background-color':`${col}`,
+                'border-color':`${getBorderColour(col)}`
               }"></span>
-          </div>
-          <div class="grid-wrapper">
+          </section>
+          <section class="grid-wrapper">
             <div 
               v-if="blocks.length"
               v-for="(block, index) of blocks" 
@@ -64,20 +65,18 @@
                 'background-color': `${block.col}`,
                 '--block-size': `${blocksize}px`
               }"
-              @click="doAction(block)"
               @mousedown="doMouseDown(block)"
               @mouseup="doMouseUp(block)"
               @mouseover="doMouseOver(block)"
               @mouseleave="doMouseLeave(block)"
             >
-            <div></div>
             </div>  
             <!-- <pre>
               <code>
                 display: {{display}}
               </code>
             </pre> -->
-          </div>
+          </section>
         </div>
       </template>
     

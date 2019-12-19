@@ -4,6 +4,7 @@ const Grid = {
     blocks: [],
     blocksClone: [],
     shuffledBlocks: [],
+    blocksize: 15,
     colours: [
       '#ffffff','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
     currentColour: '',
@@ -12,7 +13,7 @@ const Grid = {
   }),
   props: {
     gridsize: Number,
-    blocksize: Number
+    initialblocksize: Number
   },
   methods: {
     createGrid(e) {
@@ -81,6 +82,7 @@ const Grid = {
     this.display = {x:event.pageX, y:event.pageX}
   },
   mounted() {
+    this.blocksize = this.initialblocksize;
     this.createGrid();    
     this.currentColour = this.colours[0];
     // const draggable = document.querySelector('.grid-wrapper');
