@@ -1,0 +1,1 @@
+https://mobiforge.com/design-development/touch-friendly-drag-and-drop
