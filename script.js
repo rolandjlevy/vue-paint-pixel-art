@@ -66,6 +66,7 @@ const Grid = {
         item.col = '';
         return item;
       });
+      this.blocksize = this.initialblocksize;
     },
     shuffleGrid() {
       this.blocksClone = [...this.blocks];
