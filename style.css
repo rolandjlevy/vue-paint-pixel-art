@@ -1,6 +1,20 @@
 body {
   margin: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+.container {
+  width: fit-content;
+  margin: 30px auto;
+  background-color: #fff;
+  padding:30px;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -15px #00000033;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
 }
 
 .col {
