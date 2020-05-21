@@ -42,7 +42,7 @@ h2 {
   display: inline-block;
   width: 15px;
   height: 15px;
-  cursor: crosshair;
+  cursor: pointer;
   opacity: 0.5;
   border: 2px solid #bbb;
 }
@@ -70,7 +70,7 @@ input {
   border: 1px solid #999;
   display: inline-block;
   color: #fff;
-  cursor: default;
+  cursor: crosshair;
   font-size: calc(var(--block-size) / 3.3);
 }
 
