@@ -5,6 +5,7 @@ const Grid = {
     blocksClone: [],
     shuffledBlocks: [],
     blocksize: 15,
+    maxGridsize: 30,
     colours: [
       '#ffffff','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
     currentColour: '',
@@ -18,10 +19,13 @@ const Grid = {
   methods: {
     createGrid(e) {
       this.gridsize = e && e.target.value || this.gridsize;
+      // if (e && e.target.value) console.log(e.target.value);
       this.blocks = [];
       let i = 0;
+      let col = 0;
       while (i < this.gridsize * this.gridsize) {
-        this.blocks.push( {id:i, selected:false, col:'' });
+        col = i % 16;
+        this.blocks.push( {id:i, selected:false, col:this.colours[col] });
         i++;
       }
     },
@@ -59,6 +63,13 @@ const Grid = {
     },
     doMouseLeave(block) {
       if (!this.dragging && !block.selected) block.selected = false;
+    },
+    fillGrid() {
+      this.blocks = this.blocks.map(item => { 
+        item.selected = false;
+        item.col = this.currentColour;
+        return item;
+      });
     },
     resetGrid() {
       this.blocks = this.blocks.map(item => { 

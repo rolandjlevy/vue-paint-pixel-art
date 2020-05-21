@@ -6,15 +6,36 @@ body {
 
 .container {
   width: fit-content;
-  margin: 30px auto;
+  height: fit-content; 
+  margin: 0 auto;
   background-color: #fff;
-  padding:30px;
+  padding: 10px 30px;
   border-radius: 5px;
   box-shadow: 0 15px 15px -15px #00000033;
 }
 
+.grid-wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content; 
+}
+
 h1, h2, h3, h4 {
   margin-top: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg,#ffa63d,#ff3d77,#b933f9,#5f19dd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 150%;
+  font-family: 'Dancing Script', cursive;
 }
 
 .col {
@@ -29,11 +50,6 @@ h1, h2, h3, h4 {
 .col:hover {
   opacity: 1;
   border: 2px solid #333;
-}
-
-.grid-wrapper {
-  position: relative;
-  margin-top: 10px;
 }
 
 input {
@@ -83,9 +99,29 @@ input {
   text-align: center;
 }
 
-button {
+.btn {
   padding: 5px 8px;
   font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
+  background: #f9f9f9;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.m-tb-20, .m-bt-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
 }
