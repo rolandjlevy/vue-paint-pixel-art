@@ -14,7 +14,6 @@
       <main class="container">
         <h2>Pixel Grid Draw</h2>
         <grid 
-          :gridsize="Number(15)"
           :initialblocksize="Number(20)"
         />
       </main>
@@ -23,23 +22,26 @@
 
     <template id="grid-template">
       <article :style="{
-        'height': `${gridsize * blocksize + 160}px`
+        'height': `${gridsize * blocksize + 210}px`
         }">
-        
-        <input 
-            type="number" 
-            :value="gridsize" 
-            @keyup.enter="createGrid" 
-            placeholder="Grid size..."
-            min="1"
-            :max="maxGridsize"
-            maxlength="3"
-            required
-          >
-          <button class="btn" @click="resetGrid">Reset</button>
-          <button class="btn" @click="fillGrid">Fill</button>
-          <button class="btn" @click="shuffleGrid">Shuffle</button>
+        <section>
+          <span>Grid width</span> 
+          <input 
+              type="number"
+              :value="tempGridSize"
+              @keyup="updateGridsize"
+              @click="updateGridsize"
+              :placeholder="`1-${maxGridsize}`"
+              min="1"
+              :max="maxGridsize"
+              maxlength="4"
+              required
+              size="12"
+            >
+          <button class="btn" @click="createGrid" :disabled="!tempGridSize">Update</button>
+          </section>
           <section class="slidecontainer">
+            <div class="m-b-10">Block size: {{blocksize}}px</div>
             <input 
               type="range" 
               min="10" 
@@ -49,6 +51,11 @@
               class="slider" 
               id="myRange"
             >
+          </section>
+          <section>
+            <button class="btn" @click="fillGrid">Fill</button>
+            <button class="btn" @click="shuffleGrid">Shuffle</button>
+            <button class="btn" @click="resetGrid">Reset</button>
           </section>
           <section class="m-tb-20">
             <span 
@@ -82,11 +89,6 @@
               @mouseleave="doMouseLeave(block)"
             >
             </div>  
-            <!-- <pre>
-              <code>
-                display: {{display}}
-              </code>
-            </pre> -->
           </section>
         </div>
       </template>

@@ -5,6 +5,8 @@ const Grid = {
     blocksClone: [],
     shuffledBlocks: [],
     blocksize: 15,
+    tempGridSize: 15,
+    gridsize: 15,
     maxGridsize: 30,
     colours: [
       '#f6f6f6','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
@@ -13,13 +15,16 @@ const Grid = {
     display: { x:0, y:0}
   }),
   props: {
-    gridsize: Number,
     initialblocksize: Number
   },
   methods: {
-    createGrid(e) {
-      this.gridsize = e && e.target.value || this.gridsize;
-      // if (e && e.target.value) console.log(e.target.value);
+    updateGridsize(e) {
+      this.tempGridSize = e.target.value;
+    },
+    createGrid() {
+      // this.gridsize = e && e.target.value || this.gridsize;
+      console.log('this.tempGridSize', this.tempGridSize)
+      this.gridsize = this.tempGridSize;
       this.blocks = [];
       let i = 0;
       let col = 0;
