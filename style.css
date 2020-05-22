@@ -43,8 +43,8 @@ h2 {
   width: 15px;
   height: 15px;
   cursor: pointer;
-  opacity: 0.5;
-  border: 2px solid #bbb;
+  opacity: 0.8;
+  border: 2px solid #fff;
 }
 
 .col:hover {

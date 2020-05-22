@@ -7,7 +7,7 @@ const Grid = {
     blocksize: 15,
     maxGridsize: 30,
     colours: [
-      '#ffffff','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
+      '#f6f6f6','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0}
@@ -42,10 +42,10 @@ const Grid = {
       this.currentColour = col;
     },
     getOpacity(col) {
-      return this.currentColour === col ? '1' : '0.5';
+      return this.currentColour === col ? '1' : '0.8';
     },
     getBorderColour(col) {
-      return this.currentColour === col ? '#333' : '#bbb';
+      return this.currentColour === col ? '#333' : '#fff';
     },
     doMouseDown(block) {
       this.dragging = true;
