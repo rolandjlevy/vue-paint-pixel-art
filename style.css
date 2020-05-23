@@ -45,12 +45,12 @@ h2 {
   height: 15px;
   cursor: pointer;
   opacity: 0.8;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
 }
 
 .col:hover {
   opacity: 1;
-  border: 2px solid #333;
+  border: 3px solid #333;
 }
 
 input {

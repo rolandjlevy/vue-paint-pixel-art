@@ -9,7 +9,7 @@ const Grid = {
     gridsize: 15,
     maxGridsize: 30,
     colours: [
-      '#f6f6f6','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0000','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00aaff','#0066ff','#0000ff'],
+      '#f6f6f6','#cccccc','#aaaaaa','#666666','#000000','#ff00aa','#ff0033','#ff9900','#ffcc00','#ffff00','#aaff00','#00ff00','#00ffff','#00ccff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0}
@@ -22,14 +22,12 @@ const Grid = {
       this.tempGridSize = e.target.value;
     },
     createGrid() {
-      // this.gridsize = e && e.target.value || this.gridsize;
-      console.log('this.tempGridSize', this.tempGridSize)
       this.gridsize = this.tempGridSize;
       this.blocks = [];
       let i = 0;
       let col = 0;
       while (i < this.gridsize * this.gridsize) {
-        col = i % 16;
+        col = i % this.colours.length;
         this.blocks.push( {id:i, selected:false, col:this.colours[col] });
         i++;
       }
