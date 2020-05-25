@@ -1,0 +1,3 @@
+- store preset patterns and allow users to save them: https://firebase.google.com/docs/database
+- look at this tutorial: https://blog.repl.it/firebase
+- enable mobile functionality: https://mobiforge.com/design-development/touch-friendly-drag-and-drop

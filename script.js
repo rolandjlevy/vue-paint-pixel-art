@@ -32,6 +32,9 @@ const Grid = {
         i++;
       }
     },
+    outputGrid() {
+      console.log(JSON.stringify(this.blocks, null, 2));
+    },
     getTop(n) {
       return Math.floor(n / this.gridsize) * this.blocksize;
     },
