@@ -38,7 +38,7 @@
               required
               size="12"
             >
-          <button class="btn" @click="createGrid" :disabled="!tempGridSize">Update</button>
+          <button class="btn m-l-5" @click="createGrid" :disabled="!tempGridSize">Update</button>
           </section>
           <section class="slidecontainer">
             <div class="m-b-10">Block size: {{blocksize}}px</div>
@@ -54,8 +54,8 @@
           </section>
           <section>
             <button class="btn" @click="fillGrid">Fill</button>
-            <button class="btn" @click="shuffleGrid">Shuffle</button>
-            <button class="btn" @click="resetGrid">Reset</button>
+            <button class="btn m-l-5" @click="shuffleGrid">Shuffle</button>
+            <button class="btn m-l-5" @click="resetGrid">Reset</button>
             <button class="btn hidden" @click="outputGrid">Output</button>
           </section>
           <section class="m-tb-20">

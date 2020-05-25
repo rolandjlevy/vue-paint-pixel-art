@@ -112,8 +112,9 @@ input {
   padding: 5px 8px;
   font-size: 13px;
   border-radius: 5px;
+  border: 1px solid #eee;
   cursor: pointer;
-  background: #f9f9f9;
+  background: #f6f6f6;
   transition: all 0.2s ease;
 }
 
@@ -122,8 +123,10 @@ input {
 } 
 
 .btn:not(:disabled):hover {
-  background: #ffffff;
+  background: #e9e9e9;
+  box-shadow: 0 5px 5px -5px #00000099;
   transition: all 0.2s ease;
+  transform: translateY(-1px);
 }
 
 .m-tb-20, .m-bt-20 {
@@ -141,4 +144,8 @@ input {
 
 .m-b-10 {
   margin-bottom: 10px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
 }
