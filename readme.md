@@ -1,7 +1,7 @@
 # Vue: pixel grid draw experiment
 
 ## Description
-Using Vue.js to create a customisable grid and colour pallette for basic drawing.
+Vue.js app allows you to draw on a customisable grid form a colour palette
 
 + [See the live demo](https://vue-pixel-grid-draw-experiment--rjlevy.repl.co/?target=_blank)
 + [View the code on repl.it](https://repl.it/@rjlevy/Vue-pixel-grid-draw-experiment)
