@@ -80,7 +80,7 @@ const Grid = {
     resetGrid() {
       this.blocks = this.blocks.map(item => { 
         item.selected = false;
-        item.col = '';
+        item.col = this.colours[0];
         return item;
       });
       this.blocksize = this.initialblocksize;
