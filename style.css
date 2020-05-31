@@ -5,7 +5,8 @@ body {
 }
 
 body, input, button {
-  font-family: Raleway;
+  /* font-family: Raleway; */
+  font-family: 'Numans', sans-serif;
   letter-spacing: 0.5px;
 }
 
