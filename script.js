@@ -5,11 +5,11 @@ const Grid = {
     blocksClone: [],
     shuffledBlocks: [],
     blocksize: 15,
-    tempGridSize: 15,
+    tempGridSize: 16,
     gridsize: 15,
     maxGridsize: 30,
     colours: [
-      '#f6f6f6','#cccccc','#aaaaaa','#666666','#000000','#ff00cc','#ff0033','#ff6600','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
+      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0099','#ff6600','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0}
@@ -103,17 +103,6 @@ const Grid = {
     this.blocksize = this.initialblocksize;
     this.createGrid();    
     this.currentColour = this.colours[0];
-    // const draggable = document.querySelector('.grid-wrapper');
-    // console.log(draggable)
-    // draggable.addEventListener('touchmove', function(event) {
-    //   draggable.style.left = event.pageX-25 + 'px';
-    //   draggable.style.top = event.pageY-25 + 'px';
-    //   this.display = {x:event.pageX, y:event.pageX};
-    // }, false);
-    // window.addEventListener('mousemove', this.touchIsMoving);
-  },
-  destroyed() {
-    // window.removeEventListener('mousemove', this.touchIsMoving);
   }
 }
 

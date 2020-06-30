@@ -53,11 +53,6 @@ h2 {
   border: 3px solid #fff;
 }
 
-.col:hover {
-  opacity: 1;
-  border: 3px solid #333;
-}
-
 input {
   padding: 5px 8px;
   margin: 0;
@@ -73,7 +68,7 @@ input {
   height: var(--block-size);
   min-height: 10px;
   background-color: #ddd; 
-  border: 1px solid #999;
+  border: 1px solid #aaa;
   display: inline-block;
   color: #fff;
   cursor: crosshair;
