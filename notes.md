@@ -25,3 +25,5 @@
     window.removeEventListener('mousemove', this.touchIsMoving);
   }
 ```
+### Download screen capture
+http://html2canvas.hertzen.com/

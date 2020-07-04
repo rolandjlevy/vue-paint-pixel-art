@@ -2,10 +2,10 @@ body {
   margin: 20px;
   background-color: #eee;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 body, input, button {
-  /* font-family: Raleway; */
   font-family: 'Numans', sans-serif;
   letter-spacing: 0.5px;
 }
@@ -20,10 +20,21 @@ body, input, button {
   /* box-shadow: 0 15px 15px -15px #00000033; */
 }
 
+/* #download-capture {
+  width: 100% !important; 
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  background-color: grey;
+} */
+
 .grid-wrapper {
   position: relative;
   width: fit-content;
   height: fit-content; 
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4 {

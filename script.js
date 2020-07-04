@@ -9,7 +9,7 @@ const Grid = {
     gridsize: 15,
     maxGridsize: 30,
     colours: [
-      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0099','#ff6600','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
+      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0099','#ff9900','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0}
@@ -94,6 +94,24 @@ const Grid = {
         this.shuffledBlocks.push(selected[0]);
       }
       this.blocks = [...this.shuffledBlocks];
+    },
+    downloadImage () {
+      const div = document.querySelector('#download-capture');
+      const options = {
+        logging: true, 
+        letterRendering: 1,
+        allowTaint: false, 
+        removeContainer: true,
+        useCORS: true,
+        scrollX: -8,
+        scrollY: 0
+      };
+      html2canvas(div, options).then(canvas => {
+        const a = document.createElement('a');
+        a.href = canvas.toDataURL('image/jpeg', 0.9);
+        a.download = 'grid.jpeg';
+        a.click();
+      });
     }
   },
   touchIsMoving(event) {

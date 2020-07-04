@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Vue: pixel grid draw experiment</title>
+    <title>Vue: pixel grid draw</title>
     <link href="slider.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Raleway:wght@400;500;600;700&family=Numans&display=swap" rel="stylesheet">
-    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script> -->
+    <script src="html2canvas.js"></script>
   </head>
   <body>
     <div id="app">
@@ -57,6 +58,7 @@
             <button class="btn" @click="fillGrid">Fill</button>
             <button class="btn m-l-5" @click="shuffleGrid">Shuffle</button>
             <button class="btn m-l-5" @click="resetGrid">Reset</button>
+            <!-- <button class="btn m-l-5" @click="downloadImage">Download</button> -->
             <button class="btn hidden" @click="outputGrid">Output</button>
           </section>
           <section class="m-tb-20">
@@ -70,28 +72,37 @@
                 'border-color':`${getBorderColour(col)}`
               }"></span>
           </section>
-          <section class="grid-wrapper" :style="{
-            'width': `${gridsize * blocksize}px`
-            }">
-            <div 
-              v-if="blocks.length"
-              v-for="(block, index) of blocks" 
-              :key="block.id" 
-              class="block center-hv"
-              :class="{'selected': block.selected }"
-              :style="{
-                'left': `${getLeft(index)}px`, 
-                'top': `${getTop(index)}px`,
-                'background-color': `${block.col}`,
-                '--block-size': `${blocksize}px`
-              }"
-              @mousedown="doMouseDown(block)"
-              @mouseup="doMouseUp(block)"
-              @mouseover="doMouseOver(block)"
-              @mouseleave="doMouseLeave(block)"
-            >
-            </div>  
-          </section>
+          <!-- <div id="download-capture">
+            <img src="sunset.png" />
+          </div> -->
+          <div style="position:relative;float:left;">
+            <section id="download-capture" class="grid-wrapper" :style="{
+              'width': `${(gridsize * blocksize)}px`,
+              'height': `${(gridsize * blocksize)}px`,
+              'top': '5px',
+              'left': 0,
+              'position':absolute
+              }">
+              <div 
+                v-if="blocks.length"
+                v-for="(block, index) of blocks" 
+                :key="block.id" 
+                class="block center-hv"
+                :class="{'selected': block.selected }"
+                :style="{
+                  'left': `${getLeft(index)}px`, 
+                  'top': `${getTop(index)}px`,
+                  'background-color': `${block.col}`,
+                  '--block-size': `${blocksize}px`
+                }"
+                @mousedown="doMouseDown(block)"
+                @mouseup="doMouseUp(block)"
+                @mouseover="doMouseOver(block)"
+                @mouseleave="doMouseLeave(block)"
+              >
+              </div>  
+            </section>
+          </div>
         </div>
       </template>
     
