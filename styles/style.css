@@ -144,6 +144,29 @@ input {
               0 16px 16px -10px rgba(0,0,0,0.15);
 }
 
+.footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  color: #666;
+}
+
+.footer > a {
+  color: #d46989;
+}
+
+.footer > a:hover {
+  color: #ff3d77;
+}
+
+.new-tab-icon::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
 .m-tb-20, .m-bt-20 {
   margin-top: 20px;
   margin-bottom: 20px;
