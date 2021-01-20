@@ -9,7 +9,7 @@ const Grid = {
     gridsize: 16,
     maxGridsize: 30,
     colours: [
-      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0066','#ff9900','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
+      '#ffffff','#cccccc','#999999','#461f1f','#aa00ff','#ff0066','#ff9900','#ffd773','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0 }
