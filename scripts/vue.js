@@ -4,15 +4,15 @@ const Grid = {
     blocks: [],
     blocksClone: [],
     shuffledBlocks: [],
-    blocksize: 15,
+    blocksize: 19,
     tempGridSize: 16,
-    gridsize: 15,
+    gridsize: 16,
     maxGridsize: 30,
     colours: [
-      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0099','#ff9900','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
+      '#ffffff','#cccccc','#999999','#000000','#aa00ff','#ff0066','#ff9900','#ffcc00','#ffff00','#ccff00','#00ff33','#00ffff','#00ccff','#0066ff','#0000ff'],
     currentColour: '',
     dragging: false,
-    display: { x:0, y:0}
+    display: { x:0, y:0 }
   }),
   props: {
     initialblocksize: Number
@@ -121,10 +121,14 @@ const Grid = {
     this.blocksize = this.initialblocksize;
     this.createGrid();    
     this.currentColour = this.colours[0];
+  },
+  updated() {
+    // const w = this.blocksize * this.gridsize;
+    // vm.$refs.container.style.width = `${w}px`;
   }
 }
 
-new Vue({
+const vm = new Vue({
   el: "#app",
   components: {
     Grid

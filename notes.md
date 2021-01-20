@@ -1,3 +1,8 @@
+- capture event that's called with v-model
+- https://v3.vuejs.org/guide/migration/v-model.html#_2-x-syntax
+- update container width to grid-wrapper + padding
+
+
 - use Firebase to store patterns and allow users to save and load them: https://firebase.google.com/docs/database
 - implement events that make it mobile friendly: https://stackoverflow.com/questions/20927759/html5-drag-and-drop-for-mobile
 - look at this tutorial: https://blog.repl.it/firebase

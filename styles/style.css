@@ -7,6 +7,7 @@ body {
   background-color: #eee;
   font-size: 14px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body, input, button {
@@ -14,14 +15,39 @@ body, input, button {
   letter-spacing: 0.5px;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  opacity: 0;
+}
+
 .container {
   width: fit-content;
   height: fit-content; 
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: #fff;
   padding: 10px 30px;
   border-radius: 5px;
   /* box-shadow: 0 15px 15px -15px #00000033; */
+}
+
+.fade-in {
+  animation: fade-in-animation 1s ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* #download-capture {
@@ -56,7 +82,8 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 150%;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: 'VT323', monospace;
 }
 
 .col {

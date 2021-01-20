@@ -2,22 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Vue: pixel grid draw</title>
     <link href="/styles/slider.css" rel="stylesheet" type="text/css" />
     <link href="/styles/style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Raleway:wght@400;500;600;700&family=Numans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Raleway:wght@400;500;600;700&family=Numans&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script> -->
     <!-- <script src="/scripts/html2canvas.js"></script> -->
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="fade-in">
 
-      <main class="container shadow">
+      <main class="container shadow" ref="container">
         <h2>Pixel Grid Draw</h2>
         <grid 
-          :initialblocksize="Number(20)"
+          :initialblocksize="Number(19)"
         />
       </main>
       
@@ -106,7 +106,7 @@
             </div>  
           </section>
         </div>
-      </div>
+      </article>
     </template>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
