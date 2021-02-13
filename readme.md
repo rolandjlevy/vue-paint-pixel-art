@@ -1,6 +1,5 @@
-# Vue: pixel grid draw
+# Vue: draw pixel art
 
-## Description
 Vue.js project: a customisable grid and colour palette for drawing pixel art
 
 ![](https://github.com/rolandjlevy/vue-pixel-grid-draw/blob/master/images/pixel-grid-draw.gif)
