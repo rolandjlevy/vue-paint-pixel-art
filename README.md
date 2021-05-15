@@ -1,6 +1,6 @@
 # Vue: paint pixel art 🖌️
 
-> Vue.js project: a customisable grid and colour palette for painting pixel art
+> A customisable grid and colour palette for painting pixel art, using Vue.js
 
 ![](./images/pixel-grid-draw.gif)
 
