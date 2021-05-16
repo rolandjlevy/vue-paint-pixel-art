@@ -110,7 +110,7 @@ input {
   height: var(--block-size);
   min-height: 10px;
   background-color: #ddd; 
-  border: 1px solid #aaa;
+  border: 1px solid #bbb;
   display: inline-block;
   color: #fff;
   cursor: crosshair;
