@@ -4,12 +4,12 @@ const Grid = {
     blocks: [],
     blocksClone: [],
     shuffledBlocks: [],
-    blocksize: 19,
-    tempGridSize: 16,
-    gridsize: 16,
+    blocksize: 26,
+    tempGridSize: 12,
+    gridsize: 12,
     maxGridsize: 30,
     colours: [
-      '#ffffff','#dddddd','#999999','#555555','#110606','#aa00ff','#ff0066','#ff9900','#ffd773','#ffff00','#ccff00','#00ff33','#00ffff','#00aaff','#0033ff'],
+      '#ffffff','#dddddd','#aaaaaa','#666666','#110606','#aa00ff','#ff0066','#ff9900','#ffd773','#ffff00','#ccff00','#00ff33','#00ffff','#00aaff','#0033ff'],
     currentColour: '',
     dragging: false,
     display: { x:0, y:0 }
