@@ -21,8 +21,7 @@
         />
       </main>
       
-      <footer class="footer">&copy; Copyright <span class="this-year">2021</span> <a href="https://rolandlevy.co.uk" target="_blank" class="new-tab-icon">see more of my projects</a></footer>
-
+      <footer class="footer">&copy; Copyright <span class="this-year">2022</span> <a href="https://rolandlevy.co.uk" target="_blank" class="new-tab-icon">see more of my projects</a></footer>
     </div>
 
     <template id="grid-template">
@@ -32,17 +31,17 @@
         <section>
           <span>Grid width</span> 
           <input 
-              type="number"
-              :value="tempGridSize"
-              @keyup="updateGridsize"
-              @click="updateGridsize"
-              :placeholder="`1-${maxGridsize}`"
-              min="1"
-              :max="maxGridsize"
-              maxlength="4"
-              required
-              size="12"
-            >
+            type="number"
+            :value="tempGridSize"
+            @keyup="updateGridsize"
+            @click="updateGridsize"
+            :placeholder="`1-${maxGridsize}`"
+            min="1"
+            :max="maxGridsize"
+            maxlength="4"
+            required
+            size="12"
+          />
           <button class="btn m-l-5" @click="createGrid" :disabled="!tempGridSize">Update</button>
         </section>
         <section class="slidecontainer">
@@ -55,7 +54,7 @@
             v-model="blocksize"
             class="slider" 
             id="myRange"
-          >
+          />
         </section>
         <section>
           <button class="btn" @click="fillGrid">Fill</button>
